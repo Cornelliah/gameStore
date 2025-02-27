@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gamestore/pages/home/widgets/category.dart';
 import 'package:gamestore/pages/home/widgets/header.dart';
+import 'package:gamestore/pages/home/widgets/search.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -39,19 +41,22 @@ class HomePage extends StatelessWidget {
                  Column(
                       children: [
                         HeaderSection(),
+                        SearchSection(),
+                        CategorySection(),
+                       
                       ],
                  ),
                 ],
               )
           ),
 
-          bottomNavigationBar: NavigationBar(),
+          bottomNavigationBar: navigationBar(),
 
         );
       
   }
 
-   Widget NavigationBar() {
+   Widget navigationBar() {
 
     return Container(
 
